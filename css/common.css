@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+/* commonここから */
+body {
+  margin: 0;
+  background-image: url(../img/hospital-back.png);
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  font-family: "heisei-maru-gothic-std", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+p {
+  margin: 0;
+  color: #364C59;
+  font-family: "heisei-maru-gothic-std", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: "heisei-maru-gothic-std", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* commonここまで */
+
+/* headerここから */
+.header-container {
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+  padding: 1%;
+}
+
+.reservation {
+  display: flex;
+  text-wrap: nowrap;
+  gap: 8%;
+  max-width: 100%;
+}
+
+.tel,
+.web {
+  background: #d97979;
+  color: #fff;
+  padding: 8%;
+  font-size: 1.5rem;
+  border-radius: 16px;
+  transition: all 0.2s;
+}
+
+.tel {
+  display: flex;
+  align-items: center;
+  gap: 4%;
+}
+
+.tel:hover {
+  background: #f2cbbd;
+  cursor: pointer;
+}
+
+.web:hover {
+  background: #f2cbbd;
+  cursor: pointer;
+}
+
+/* nav(header/footer共通) */
+
+.nav-container {
+  background: #f2cbbd;
+  max-width: 100%;
+  padding: 1%;
+}
+
+.nav-container ul {
+  display: flex;
+  justify-content: center;
+  gap: 4%;
+  max-width: 100%;
+}
+
+.nav-container a {
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.nav-container a:hover {
+  color: #d97979;
+  transition: all 0.2s;
+}
+/* headerここまで */
+
+/* ここにコンテンツを記入 */
+
+/* footerここから */
+footer {
+  background: #f2cbbd;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 100%;
+  padding: 1%;
+}
+
+small {
+  color: #364C59;
+  font-family: "heisei-maru-gothic-std", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* footerここまで */

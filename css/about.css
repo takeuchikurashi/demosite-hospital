@@ -1,0 +1,490 @@
+@charset "utf-8";
+
+/* commonここから */
+body {
+  margin: 0;
+  background-image: url(../img/hospital-back.png);
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  font-family: "heisei-maru-gothic-std", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+p {
+  margin: 0;
+  color: #364C59;
+  font-family: "heisei-maru-gothic-std", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: "heisei-maru-gothic-std", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.detail-btn {
+  font-family: "heisei-maru-gothic-std", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #f2cbbd;
+  color: #fff;
+  padding: 16px;
+  border-radius: 20px;
+  display: block;
+  text-align: center;
+  width: 160px;
+  margin: 2% auto 0;
+}
+
+.margin {
+  margin-top: 4%;
+  padding: 2%;
+  background: #fff;
+}
+
+/* h3 {
+  color: #364C59;
+  font-size: 28px;
+  text-align: center;
+  border-bottom: double 5px #d97979;
+  display: inline-block;
+} */
+
+/* commonここまで */
+
+/* headerここから */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.header-container {
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+  padding: 1%;
+}
+
+.reservation {
+  display: flex;
+  text-wrap: nowrap;
+  gap: 8%;
+  max-width: 100%;
+}
+
+.tel,
+.web {
+  background: #d97979;
+  color: #fff;
+  padding: 16px;
+  font-size: 1.5rem;
+  border-radius: 16px;
+  transition: all 0.2s;
+}
+
+.tel {
+  display: flex;
+  align-items: center;
+  gap: 4%;
+}
+
+.tel:hover {
+  background: #f2cbbd;
+  cursor: pointer;
+}
+
+.web:hover {
+  background: #f2cbbd;
+  cursor: pointer;
+}
+
+/* nav(header/footer共通) */
+
+.nav-container {
+  background: #f2cbbd;
+  max-width: 100%;
+  padding: 1%;
+}
+
+.nav-container ul {
+  display: flex;
+  justify-content: center;
+  gap: 4%;
+  max-width: 100%;
+}
+
+.nav-container a {
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.nav-container a:hover {
+  color: #d97979;
+  transition: all 0.2s;
+}
+
+
+/* headerここまで */
+
+#nav-about {
+  color: #d97979;
+}
+
+.page-title {
+  width: 160px;
+  max-width: 100%;
+  text-align: center;
+  margin: 14% auto 0;
+  color: #364C59;
+  font-size: 1rem;
+  border-bottom: 10px double #f2cbbd;
+}
+
+/* aboutここから */
+.about-title {
+  color: #364C59;
+}
+
+.about-greeting {
+  margin-top: 4%;
+  background: #fff;
+  text-align: center;
+  padding: 4%;
+
+  animation-name: fadeInAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.about-greeting-item {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4%;
+}
+
+.about-doctor {
+  margin-top: 2%;
+  background: #fff;
+  text-align: center;
+  padding: 4%;
+
+  animation-name: fadeInAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.about-doctor-item {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4%;
+}
+
+.doctor-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-name {
+  font-size: 18px;
+}
+
+.doctor-detail {
+  margin-top: 2%;
+}
+
+/* aboutここまで */
+
+/* footerここから */
+footer {
+  margin-top: 2%;
+  background: #f2cbbd;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 100%;
+  padding: 1%;
+}
+
+small {
+  color: #364C59;
+  font-family: "heisei-maru-gothic-std", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* footerここまで */
+
+.header-nav-sp,
+.openbtn {
+  display: none;
+}
+
+@media (max-width:768px) {
+
+  .header-nav-sp,
+  .openbtn {
+    display: block;
+  }
+
+  /* commonここから */
+  body {
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  li {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: 2%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .detail-btn {
+    width: 100px;
+  }
+
+  /* commoonここまで */
+
+  /* headerここから */
+
+  h1 {
+    max-width: 70%;
+    z-index: 999;
+  }
+
+  .reservation-header {
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    gap: 2%;
+    background: #fff;
+    padding: 2%;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+  }
+
+  .nav-container {
+    display: none;
+  }
+
+  /* スマホ用メニューここから */
+  .header-nav-sp {
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    right: -120%;
+    width: 100%;
+    height: 100vh;
+    background: #f2cbbd;
+    transition: all 0.6s;
+  }
+
+  .header-nav-sp.panelactive {
+    right: 0;
+  }
+
+  .header-nav-sp.panelactive .header-nav-sp-list {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .header-nav-sp ul {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .header-nav-sp li {
+    list-style: none;
+    text-align: center;
+  }
+
+  .header-nav-sp li a {
+    color: #364C59;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+  }
+
+  .openbtn {
+    position: fixed;
+    z-index: 9999;
+    top: 1px;
+    right: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+
+  .openbtn span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #d97979;
+    width: 45%;
+  }
+
+  .openbtn span:nth-of-type(1) {
+    top: 15px;
+  }
+
+  .openbtn span:nth-of-type(2) {
+    top: 23px;
+  }
+
+  .openbtn span:nth-of-type(3) {
+    top: 31px;
+  }
+
+  .openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+
+  .openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+
+  /* スマホ用メニューここまで */
+
+  /* headerここまで */
+
+  /* aboutここから */
+  h2 {
+    padding-top: 24%;
+  }
+
+.about-greeting-item {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-illust {
+  width: 70%;
+  padding: 4%;
+}
+
+.about-doctor-item {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-illust {
+  width: 70%;
+  padding: 4%;
+}
+  /* aboutここまで */
+
+  /* footerここから */
+  footer {
+    padding-bottom: 32%;
+  }
+
+  .footer-container {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 2%;
+  }
+
+  .footer-nav {
+    display: none;
+  }
+
+  small {
+    font-size: 10px;
+  }
+
+  /* footerここまで */
+}

@@ -1,0 +1,644 @@
+@charset "utf-8";
+
+/* commonここから */
+body {
+  margin: 0;
+  background-image: url(../img/hospital-back.png);
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  font-family: "heisei-maru-gothic-std", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+p {
+  margin: 0;
+  color: #364C59;
+  font-family: "heisei-maru-gothic-std", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: "heisei-maru-gothic-std", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.detail-btn {
+  font-family: "heisei-maru-gothic-std", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #f2cbbd;
+  color: #fff;
+  padding: 16px;
+  border-radius: 20px;
+  display: block;
+  text-align: center;
+  width: 160px;
+  margin: 2% auto 0;
+  transition: all 0.3s;
+}
+
+.detail-btn:hover {
+  opacity: calc(0.7);
+}
+
+.margin {
+  margin-top: 4%;
+  padding: 2%;
+  background: #fff;
+}
+
+h3 {
+  color: #364C59;
+  font-size: 28px;
+  text-align: center;
+  border-bottom: double 5px #d97979;
+  display: inline-block;
+}
+
+/* commonここまで */
+
+/* headerここから */
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+.header-container {
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+  padding: 1%;
+}
+
+.reservation {
+  display: flex;
+  text-wrap: nowrap;
+  gap: 8%;
+  max-width: 100%;
+}
+
+.tel,
+.web {
+  background: #d97979;
+  color: #fff;
+  padding: 16px;
+  font-size: 1.5rem;
+  border-radius: 16px;
+  transition: all 0.2s;
+}
+
+.tel {
+  display: flex;
+  align-items: center;
+  gap: 4%;
+}
+
+.tel:hover {
+  background: #f2cbbd;
+  cursor: pointer;
+}
+
+.web:hover {
+  background: #f2cbbd;
+  cursor: pointer;
+}
+
+/* nav(header/footer共通) */
+
+.nav-container {
+  background: #f2cbbd;
+  max-width: 100%;
+  padding: 1%;
+}
+
+.nav-container ul {
+  display: flex;
+  justify-content: center;
+  gap: 4%;
+  max-width: 100%;
+}
+
+.nav-container a {
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.nav-container a:hover {
+  color: #d97979;
+  transition: all 0.2s;
+}
+
+#nav-home {
+  color: #d97979;
+}
+
+
+
+/* headerここまで */
+
+/* mainここから */
+main {
+  background: #fff;
+  padding: 15% 4% 4%;
+  animation-name: fadeInAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.main-container {
+  max-width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-item1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  max-width: 100%;
+}
+
+.main-item2 {
+  color: #d97979;
+  font-weight: normal;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16%;
+  max-width: 100%;
+}
+
+.main-item3 {
+  margin-top: 8%;
+  max-width: 100%;
+}
+
+/* mainここまで */
+
+/* newsここから */
+.news-container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.accordion-area {
+  list-style: none;
+  width: 96%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.accordion-area li {
+  margin: 10px 0;
+  color: #364C59;
+  font-family: "heisei-maru-gothic-std", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.accordion-area section {
+  border: 1px solid #f2cbbd;
+}
+
+/*アコーディオンタイトル*/
+.title {
+  position: relative;
+  /*+マークの位置基準とするためrelative指定*/
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 3% 3% 3% 50px;
+  transition: all .5s ease;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 2px;
+  background-color: #d97979;
+
+}
+
+.title::before {
+  top: 48%;
+  left: 15px;
+  transform: rotate(0deg);
+
+}
+
+.title::after {
+  top: 48%;
+  left: 15px;
+  transform: rotate(90deg);
+
+}
+
+/*　closeというクラスがついたら形状変化　*/
+.title.close::before {
+  transform: rotate(45deg);
+}
+
+.title.close::after {
+  transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.box {
+  display: none;
+  /*はじめは非表示*/
+  background: #f3f3f3;
+  margin: 0 3% 3% 3%;
+  padding: 3%;
+}
+
+/* newsここまで */
+
+/* aboutここから */
+.about-container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.about-item-container {
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8%;
+}
+
+/* aboutここまで */
+
+/* menuここから */
+.menu-container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.menu-item-container {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  gap: 4%;
+}
+
+.menu-item {
+  transition: all 0.3s;
+}
+
+.menu-item:hover {
+  transform: scale(1.1);
+}
+
+/* menuここまで */
+
+/* accessここから */
+.access-container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.access-item-container {
+  margin-top: 2%;
+  text-align: center;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+.access .reservation {
+  margin-top: 4%;
+  justify-content: center;
+  gap: 2%;
+}
+
+.access .main-item3 {
+  margin-top: 2%;
+}
+
+address {
+  max-width: 50%;
+  margin: 4% auto 0;
+  padding-top: 4%;
+  border-top: 5px double #f2cbbd;
+  font-style: normal;
+  color: #364C59;
+}
+
+/* accessここまで */
+
+/* footerここから */
+footer {
+  margin-top: 2%;
+  background: #f2cbbd;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 100%;
+  padding: 1%;
+}
+
+small {
+  color: #364C59;
+  font-family: "heisei-maru-gothic-std", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* footerここまで */
+
+.header-nav-sp,
+.openbtn {
+  display: none;
+}
+
+@media (max-width:768px) {
+
+  .header-nav-sp,
+  .openbtn {
+    display: block;
+  }
+
+  /* commonここから */
+  body {
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  li {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: 2%;
+  }
+
+  .detail-btn {
+    width: 100px;
+  }
+
+  /* commoonここまで */
+
+  /* headerここから */
+
+  h1 {
+    max-width: 70%;
+    z-index: 999;
+  }
+
+  .reservation-header {
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    gap: 2%;
+    background: #fff;
+    padding: 2%;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+  }
+
+  .nav-container {
+    display: none;
+  }
+
+  /* スマホ用メニューここから */
+  .header-nav-sp {
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    right: -120%;
+    width: 100%;
+    height: 100vh;
+    background: #f2cbbd;
+    transition: all 0.6s;
+  }
+
+  .header-nav-sp.panelactive {
+    right: 0;
+  }
+
+  .header-nav-sp.panelactive .header-nav-sp-list {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .header-nav-sp ul {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .header-nav-sp li {
+    list-style: none;
+    text-align: center;
+  }
+
+  .header-nav-sp li a {
+    color: #364C59;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+  }
+
+  .openbtn {
+    position: fixed;
+    z-index: 9999;
+    top: 1px;
+    right: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+
+  .openbtn span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #d97979;
+    width: 45%;
+  }
+
+  .openbtn span:nth-of-type(1) {
+    top: 15px;
+  }
+
+  .openbtn span:nth-of-type(2) {
+    top: 23px;
+  }
+
+  .openbtn span:nth-of-type(3) {
+    top: 31px;
+  }
+
+  .openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+
+  .openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+  /* スマホ用メニューここまで */
+
+  /* headerここまで */
+
+  /* mainここから */
+  .main-container {
+    margin-top: 8%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .main-item1 {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .main-item2 {
+    font-size: 18px;
+    margin-top: 8%;
+  }
+
+  /* mainここまで */
+
+  /* newsここから */
+  /* 変更なし */
+  /* newsここまで */
+
+  /* aboutここから */
+  .about-item-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-text {
+    margin: 4% auto;
+  }
+
+  .about-illust {
+    max-width: 70%;
+    margin: 4% auto 4%;
+  }
+
+  /* aboutここまで */
+
+  /* menuここから */
+  /* 変更なし */
+  /* menuここまで */
+
+  /* accessここから */
+  .reservation-access {
+    display: none;
+  }
+
+  address {
+    max-width: 100%;
+    margin: 4% auto;
+  }
+
+  /* accessここまで */
+
+  /* footerここから */
+  footer {
+    padding-bottom: 32%;
+  }
+
+  .footer-container {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 2%;
+  }
+
+  .footer-nav {
+    display: none;
+  }
+
+  small {
+    font-size: 10px;
+  }
+
+  /* footerここまで */
+
+
+}
